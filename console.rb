@@ -8,13 +8,12 @@ require( 'pry-byebug' )
 
 item1 = Item.new ({"id" => 1,
           "manufacturer_id" => 20,
-          "name" => "TV",
-          "description" => "Smart TV",
-          "cost_price" => 100.11,
+          "name" => "Samsung WEDZ900",
+          "type" => "Smart TV",
+          "description" => " ",
+          "purchase_price" => 100.11,
           "sell_price" => 200,
-          "quantity_in_stock" => 10,
-          "min_stock_level" => 2,
-          "max_stock_level" => 50 })
+          "quantity_in_stock" => 10 })
 # item1.save
 
 
