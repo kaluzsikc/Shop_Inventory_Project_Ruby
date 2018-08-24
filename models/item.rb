@@ -16,4 +16,9 @@ class Item
     @manufacturer_id = options['manufacturer_id'].to_i
   end
 
+  def save()
+
+
+  end
+
 end

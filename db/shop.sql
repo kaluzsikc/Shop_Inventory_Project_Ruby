@@ -18,5 +18,5 @@ CREATE TABLE items(
   quantity_in_stock INT4 NOT NULL,
   min_stock_level INT4 NOT NULL,
   max_stock_level INT4 NOT NULL,
-  manufacturers_id INT4 REFERENCES manufacturers(id) ON DELETE CASCADE
+  manufacturer_id INT4 REFERENCES manufacturers(id) ON DELETE CASCADE
 );
