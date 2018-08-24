@@ -17,7 +17,18 @@ class Item
   end
 
   def save()
-
+    sql = "INSERT INTO items
+    (
+      name, description, cost_price, sell_price
+    )
+    VALUES
+    (
+      $1, $2, $3, $4
+    )
+    RETURNING id"
+    values = [@name, @description, @cost_price, @sell_price]
+    location = SqlRunner.run( sql, values ).first
+    @id = location['id'].to_i
 
   end
 
