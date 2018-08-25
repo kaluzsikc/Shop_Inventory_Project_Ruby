@@ -4,7 +4,7 @@ require_relative( 'models/manufacturer' )
 require( 'pry-byebug' )
 
 Item.delete_all()
-# Manufacturer.delete_all()
+Manufacturer.delete_all()
 
 item1 = Item.new ({"id" => 1,
           "manufacturer_id" => 20,
@@ -32,6 +32,12 @@ manufacturer1= Manufacturer.new ({"id" =>10,
               "address" => "123 Lothian Road, Edinburgh, UK",
               "telephone" => "123456789"})
 manufacturer1.save
+
+manufacturer2= Manufacturer.new ({"id" =>20,
+              "name" => "Samsung",
+              "address" => "6 Colinton Road, Glasgow, UK",
+              "telephone" => "223543"})
+manufacturer2.save
 
 binding.pry
 nil
