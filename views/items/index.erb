@@ -1,0 +1,15 @@
+<% @items.each do |item| %>
+
+  <p>ID: <%= item.id() %></p>
+  <p>Name: <%= item.name() %></p>
+  <p>Type: <%= item.type() %></p>
+  <p>Description: <%= item.description() %></p>
+  <p>Purchace Price: <%= item.purchase_price() %></p>
+  <p>Sell Price: <%= item.sell_price() %></p>
+  <p>Quantity in Stock: <%= item.quantity_in_stock() %></p>
+
+  <p><a href="/items/<%= item.id %>">Show Item</a></p>
+
+<hr />
+
+<% end %>
