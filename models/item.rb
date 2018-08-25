@@ -63,5 +63,16 @@ class Item
   SqlRunner.run(sql)
   end
 
+  # def self.level()
+  #
+  # end
+
+  # def self.assign_manufacturer()
+  #
+  # end
+
+  # def manufacturers()
+  #
+  # end
 
 end

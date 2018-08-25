@@ -58,4 +58,8 @@ class Manufacturer
     SqlRunner.run( sql)
   end
 
+  # def products()
+  #
+  # end
+
 end
