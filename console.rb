@@ -31,7 +31,7 @@ manufacturer1= Manufacturer.new ({"id" =>10,
               "name" => "LG",
               "address" => "123 Lothian Road, Edinburgh, UK",
               "telephone" => "123456789"})
-
+manufacturer1.save
 
 binding.pry
 nil
