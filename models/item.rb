@@ -26,8 +26,8 @@ class Item
     )
     RETURNING id"
     values = [@name, @type, @description, @quantity_in_stock, @purchase_price, @sell_price]
-    location = SqlRunner.run( sql, values ).first
-    @id = location['id'].to_i
+    item = SqlRunner.run( sql, values ).first
+    @id = item['id'].to_i
   end
 
   def update()
@@ -61,5 +61,7 @@ class Item
   def self.delete_all()
   sql = "DELETE FROM items"
   SqlRunner.run(sql)
-end
+  end
+
+
 end

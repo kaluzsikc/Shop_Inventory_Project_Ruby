@@ -27,5 +27,11 @@ item2 = Item.new ({"id" => 2,
 item2.save
 
 
+manufacturer1= Manufacturer.new ({"id" =>10,
+              "name" => "LG",
+              "address" => "123 Lothian Road, Edinburgh, UK",
+              "telephone" => "123456789"})
+
+
 binding.pry
 nil
