@@ -28,7 +28,7 @@ class TestItem < MiniTest::Test
 
   def test_item_has_name()
     result = @item.name()
-    assert_equal("TV", result)
+    assert_equal("Samsung WEDZ900", result)
   end
 
   def test_item_has_description()

@@ -28,7 +28,19 @@ class Item
     values = [@name, @type, @description, @quantity_in_stock, @purchase_price, @sell_price]
     location = SqlRunner.run( sql, values ).first
     @id = location['id'].to_i
-
   end
 
+  def update()
+    sql = "UPDATE items
+    SET
+    (
+      name, type, description, quantity_in_stock, purchase_price, sell_price
+    ) =
+    (
+      $1, $2, $3, $4, $5, $6
+    )
+    WHERE id = $7"
+    values = [@name, @type, @description, @quantity_in_stock, @purchase_price, @sell_price, @id]
+    SqlRunner.run( sql, values)
+  end
 end
