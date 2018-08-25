@@ -43,4 +43,11 @@ class Item
     values = [@name, @type, @description, @quantity_in_stock, @purchase_price, @sell_price, @id]
     SqlRunner.run( sql, values)
   end
+
+  def self.all()
+    sql = "SELECT * FROM items"
+    product_list = SqlRunner.run(sql)
+    products = product_list.map { |item| Item.new(item) }
+    return products
+  end
 end
