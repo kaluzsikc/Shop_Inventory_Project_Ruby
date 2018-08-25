@@ -3,7 +3,7 @@ require_relative( 'models/manufacturer' )
 
 require( 'pry-byebug' )
 
-# Item.delete_all()
+Item.delete_all()
 # Manufacturer.delete_all()
 
 item1 = Item.new ({"id" => 1,

@@ -50,4 +50,9 @@ class Item
     products = product_list.map { |item| Item.new(item) }
     return products
   end
+
+  def self.delete_all()
+  sql = "DELETE FROM items"
+  SqlRunner.run(sql)
+end
 end
