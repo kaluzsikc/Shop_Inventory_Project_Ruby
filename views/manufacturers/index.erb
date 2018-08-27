@@ -11,7 +11,9 @@
     <th>Telephone</th>
     <th></th>
   </tr>
-  <% for manufacturer in @manufacturers %>
+
+  <% for manufacturer in @manufacturer %>
+
   <tr>
     <td><%= manufacturer.id %></td>
     <td>|</td>
@@ -23,3 +25,6 @@
   </tr>
   <% end %>
 </table>
+
+<br><br>
+  <a href="/manufacturers/new" class="btn" >Add New Manufacturer</a>

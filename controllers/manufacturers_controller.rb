@@ -4,7 +4,7 @@ require( 'pry-byebug' )
 require_relative( '../models/manufacturer.rb' )
 
 get '/manufacturers' do
-  @manufacturers = Manufacturer.all()
+  @manufacturer = Manufacturer.all()
   erb ( :'manufacturers/index')
 end
 
@@ -22,6 +22,22 @@ end
 # Create
 post '/manufacturers/new' do
   @manufacturer = Manufacturer.new( params )
-  @Manufacturer.save()
-  erb ( :'manufacturers/index')
+  @manufacturer.save()
+  redirect to '/manufacturers'
+end
+
+#EDIT
+get '/manufacturers/:id/edit' do
+  @manufacturer = Manufacturer.find( params[:id] )
+  erb ( :'manufacturers/edit')
+end
+
+
+
+
+#DELETE
+post '/manufacturers/:id/delete' do
+    manufacturer = Manufacturer.find( params[:id] )
+    manufacturer.delete()
+    redirect to '/manufacturers'
 end
