@@ -1,6 +1,9 @@
 <h1>New Item</h1>
 
-<form method="post" action="/items/new">
+<form method="post" action='/items/:id/edit'>
+
+  <label for="Name">Manufacturer:</label>
+    <input id="name" type="text" name="name"/>
 
   <label for="Name">Name:</label>
     <input id="name" type="text" name="name"/>
@@ -20,6 +23,5 @@
   <label for="quantity_in_stock">Quantity in Stock:</label>
     <input id="quantity_in_stock" type="text" name="quantity_in_stock" />
 
-
-  <input type='submit' value="Add Item"/>
+    <input type='submit' value="Create Item"/>
 </form>
