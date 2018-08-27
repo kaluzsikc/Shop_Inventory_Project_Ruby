@@ -1,25 +1,25 @@
 <form method="post" action='/items/:id/edit'>
 
   <label for="Name">Manufacturer:</label>
-    <input id="name" type="text" name="name" value = "<%=@items.manufacturer_id %>"/>
+    <input id="name" type="text" name="name" value = "<%=@item.manufacturer_id %>"/>
 
   <label for="Name">Name:</label>
-    <input id="name" type="text" name="name" value = "<%=@items.name %>"/>
+    <input id="name" type="text" name="name" value = "<%=@item.name %>"/>
 
   <label for="type">Type:</label>
-    <input id="type" type="text" name="type" value = "<%=@items.type %>" />
+    <input id="type" type="text" name="type" value = "<%=@item.type %>" />
 
   <label for="description">Description:</label>
-    <input id="description" type="text" name="description" value = "<%=@items.description %>" />
+    <input id="description" type="text" name="description" value = "<%=@item.description %>" />
 
   <label for="purchase_price">Purchase Price:</label>
-    <input id="purchase_price" type="text" name="purchase_price" value = "<%=@items.purchase_price %>" />
+    <input id="purchase_price" type="text" name="purchase_price" value = "<%=@item.purchase_price %>" />
 
   <label for="sell_price">Sell Price:</label>
-    <input id="sell_price" type="text" name="sell_price" value = "<%=@items.sell_price %>" />
+    <input id="sell_price" type="text" name="sell_price" value = "<%=@item.sell_price %>" />
 
   <label for="quantity_in_stock">Quantity in Stock:</label>
-    <input id="quantity_in_stock" type="text" name="quantity_in_stock" value = "<%=@items.quantity_in_stock %>" />
+    <input id="quantity_in_stock" type="text" name="quantity_in_stock" value = "<%=@item.quantity_in_stock %>" />
 
     <input type='submit' value="Update Item"/>
 </form>

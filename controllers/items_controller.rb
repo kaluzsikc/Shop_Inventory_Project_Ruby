@@ -7,25 +7,37 @@ also_reload( '../models/*' )
 
 
 get '/items' do
-  @items = Item.all()
+  @item = Item.all()
   erb ( :'items/index')
 end
-
+#New
 get '/items/new' do
-  erb(:'items/new')
+  erb ( :'items/new')
 end
 
-#FIND BY ID
+#Show
 get '/items/:id' do
-  @items = Item.find(params['id'].to_i)
-  erb( :'items/show' )
+  @item = Item.find(params['id'].to_i)
+  erb ( :'items/show' )
 end
 
-# NEW
+# Create
 post '/items/new' do
   @item = Item.new( params )
   @item.save()
   erb ( :'items/index')
+end
+
+#EDIT
+get '/items/:id/edit' do
+  @item = Item.find( params[:id] )
+  erb ( :'items/edit')
+end
+
+#UPDATE
+post '/items/:id' do
+Item.new(params).update
+redirect to '/items/index'
 end
 
 #DELETE
