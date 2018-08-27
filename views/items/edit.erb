@@ -1,0 +1,25 @@
+<form method="post" action='/items/:id/edit'>
+
+  <label for="Name">Manufacturer:</label>
+    <input id="name" type="text" name="name" value = "<%=@items.manufacturer_id %>"/>
+
+  <label for="Name">Name:</label>
+    <input id="name" type="text" name="name" value = "<%=@items.name %>"/>
+
+  <label for="type">Type:</label>
+    <input id="type" type="text" name="type" value = "<%=@items.type %>" />
+
+  <label for="description">Description:</label>
+    <input id="description" type="text" name="description" value = "<%=@items.description %>" />
+
+  <label for="purchase_price">Purchase Price:</label>
+    <input id="purchase_price" type="text" name="purchase_price" value = "<%=@items.purchase_price %>" />
+
+  <label for="sell_price">Sell Price:</label>
+    <input id="sell_price" type="text" name="sell_price" value = "<%=@items.sell_price %>" />
+
+  <label for="quantity_in_stock">Quantity in Stock:</label>
+    <input id="quantity_in_stock" type="text" name="quantity_in_stock" value = "<%=@items.quantity_in_stock %>" />
+
+    <input type='submit' value="Update Item"/>
+</form>

@@ -1,7 +1,7 @@
 require_relative("../db/sql_runner")
 
 class Item
-  
+
   attr_reader :id
   attr_accessor :manufacturer_id, :name, :type, :description, :purchase_price, :sell_price, :quantity_in_stock
 
@@ -62,9 +62,9 @@ class Item
 
   def level()
     if @quantity_in_stock < 10
-      "LOW"
+      "Low"
     elsif @quantity_in_stock >50
-      "HIGH"
+      "High"
     else
       "Medium"
     end
@@ -88,6 +88,11 @@ class Item
     SqlRunner.run(sql)
   end
 
+  # def profit()
+  #
+  # @sell_price / @purchase_price
+  #
+  # end
 
   # def self.assign_manufacturer()
   #
