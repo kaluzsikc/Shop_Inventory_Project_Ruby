@@ -6,10 +6,10 @@
 <p>Telephone:         <%= @manufacturer.telephone %></p>
 
 
-<form method="get" action="/manufacturer/<%=@manufacturer.id%>/edit">
+<form method="get" action="/manufacturers/<%=@manufacturer.id%>/edit">
   <input type='submit' value="Edit Manufacturer"/>
 </form>
 
-<form method="post" action="/manufacturer/<%=@manufacturer.id%>/delete">
+<form method="post" action="/manufacturers/<%=@manufacturer.id%>/delete">
   <input type='submit' value="Delete Manufacturer"/>
 </form>

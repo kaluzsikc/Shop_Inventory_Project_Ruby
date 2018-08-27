@@ -29,7 +29,7 @@ end
 #EDIT
 get '/manufacturers/:id/edit' do
   @manufacturer = Manufacturer.find( params[:id] )
-  erb ( :'manufacturers/edit')
+  redirect to '/manufacturers'
 end
 
 

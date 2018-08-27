@@ -25,7 +25,7 @@ end
 post '/items/new' do
   @item = Item.new( params )
   @item.save()
-  erb ( :'items/index')
+  redirect to '/items'
 end
 
 #EDIT
