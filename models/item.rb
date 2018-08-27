@@ -1,8 +1,9 @@
 require_relative("../db/sql_runner")
 
 class Item
-
-  attr_accessor :id, :name, :type, :description, :purchase_price, :sell_price, :quantity_in_stock, :manufacturer_id
+  
+  attr_reader :id
+  attr_accessor :manufacturer_id, :name, :type, :description, :purchase_price, :sell_price, :quantity_in_stock
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -18,14 +19,14 @@ class Item
   def save()
     sql = "INSERT INTO items
     (
-      name, type, description, quantity_in_stock, purchase_price, sell_price
+      manufacturer_id, name, type, description, quantity_in_stock, purchase_price, sell_price
     )
     VALUES
     (
-      $1, $2, $3, $4, $5, $6
+      $1, $2, $3, $4, $5, $6, $7
     )
     RETURNING id"
-    values = [@name, @type, @description, @quantity_in_stock, @purchase_price, @sell_price]
+    values = [@manufacturer_id, @name, @type, @description, @quantity_in_stock, @purchase_price, @sell_price]
     item = SqlRunner.run( sql, values ).first
     @id = item['id'].to_i
   end
@@ -34,13 +35,13 @@ class Item
     sql = "UPDATE items
     SET
     (
-      name, type, description, quantity_in_stock, purchase_price, sell_price
+      manufacturer_id, name, type, description, quantity_in_stock, purchase_price, sell_price
     ) =
     (
-      $1, $2, $3, $4, $5, $6
+      $1, $2, $3, $4, $5, $6, $7
     )
-    WHERE id = $7"
-    values = [@name, @type, @description, @quantity_in_stock, @purchase_price, @sell_price, @id]
+    WHERE id = $8"
+    values = [@manufacturer_id, @name, @type, @description, @quantity_in_stock, @purchase_price, @sell_price, @id]
     SqlRunner.run( sql, values)
   end
 

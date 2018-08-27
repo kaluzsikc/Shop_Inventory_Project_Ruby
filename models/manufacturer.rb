@@ -2,7 +2,8 @@ require_relative("../db/sql_runner")
 
 class Manufacturer
 
-  attr_accessor :id, :name, :address, :telephone
+  attr_reader :id
+  attr_accessor :name, :address, :telephone
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
