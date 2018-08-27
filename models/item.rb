@@ -44,6 +44,14 @@ class Item
     SqlRunner.run( sql, values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM items WHERE id = $1"
+    values = [id]
+    item = SqlRunner.run( sql, values)
+    result = Item.new(item.first)
+    return result
+  end
+
   def self.all()
     sql = "SELECT * FROM items"
     product_list = SqlRunner.run(sql)
@@ -59,8 +67,8 @@ class Item
   end
 
   def self.delete_all()
-  sql = "DELETE FROM items"
-  SqlRunner.run(sql)
+    sql = "DELETE FROM items"
+    SqlRunner.run(sql)
   end
 
   # def self.level()

@@ -26,6 +26,96 @@ item2 = Item.new ({"id" => 2,
           "quantity_in_stock" => 5 })
 item2.save
 
+item3 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item3.save
+
+item4 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item4.save
+
+item5 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item5.save
+
+item6 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item6.save
+
+item7 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item7.save
+
+item8 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item8.save
+
+item9 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item9.save
+
+item6 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item6.save
+
+item10 = Item.new ({"id" => 2,
+          "manufacturer_id" => 10,
+          "name" => "LG WEDZ900",
+          "type" => "Android TV",
+          "description" => " ",
+          "purchase_price" => 99.99,
+          "sell_price" => 150,
+          "quantity_in_stock" => 5 })
+item10.save
+
 
 manufacturer1= Manufacturer.new ({"id" =>10,
               "name" => "LG",
