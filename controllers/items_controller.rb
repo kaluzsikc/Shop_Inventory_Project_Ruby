@@ -29,8 +29,15 @@ get '/items/:id/edit' do
     # redirect to '/items'
   end
 
-  # #UPDATE
-  # post '/items/:id' do
-  # Item.new(params).update
-  # # redirect to ( :'items/index')
-  # end
+  #UPDATE
+  post '/items/:id' do
+  Item.new(params).update
+  redirect to '/items/index'
+  end
+
+  #DELETE
+  post '/items/:id/delete' do
+    item = Item.find( params[:id] )
+    item.delete()
+    redirect to '/items'
+  end
