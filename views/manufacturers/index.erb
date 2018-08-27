@@ -1,0 +1,25 @@
+<h1>Manufacturers</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th></th>
+    <th>Name</th>
+    <th></th>
+    <th>Address</th>
+    <th></th>
+    <th>Telephone</th>
+    <th></th>
+  </tr>
+  <% for manufacturer in @manufacturers %>
+  <tr>
+    <td><%= manufacturer.id %></td>
+    <td>|</td>
+    <td><a href="manufacturers/<%= manufacturer.id %>"><%= manufacturer.name %></a></td>
+    <td>|</td>
+    <td><%= manufacturer.address %></td>
+    <td>|</td>
+    <td><%= manufacturer.telephone %></td>
+  </tr>
+  <% end %>
+</table>

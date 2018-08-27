@@ -1,15 +1,41 @@
-<% @items.each do |item| %>
+<h1>Items on Stock</h1>
 
-  <p>ID: <%= item.id() %></p>
-  <p>Name: <%= item.name() %></p>
-  <p>Type: <%= item.type() %></p>
-  <p>Description: <%= item.description() %></p>
-  <p>Purchace Price: <%= item.purchase_price() %></p>
-  <p>Sell Price: <%= item.sell_price() %></p>
-  <p>Quantity in Stock: <%= item.quantity_in_stock() %></p>
+<table>
+  <tr>
+    <th>Brand</th>
+    <th></th>
+    <th>Name</th>
+    <th></th>
+    <th>Type</th>
+    <th></th>
+    <th>Quantity</th>
+    <th></th>
+    <th>Stock Level</th>
+    <th></th>
+    <th>Purchase Price</th>
+    <th></th>
+    <th>Sell Price</th>
+    <th></th>
+    <th>Profit</th>
 
-  <p><a href="/items/<%= item.id %>">Show Item</a></p>
-
-<hr />
-
-<% end %>
+  </tr>
+  <% for item in @items %>
+  <tr>
+    <td><%= item.manufacturer_id %></td>
+    <td>|</td>
+    <td><a href="/items/<%= item.id %>"><%= item.name %></a></td>
+    <td>|</td>
+    <td><%= item.type %></td>
+    <td>|</td>
+    <td><%= item.quantity_in_stock %></td>
+    <td>|</td>
+    <td>lvl</td>
+    <td>|</td>
+    <td><%= item.purchase_price %></td>
+    <td>|</td>
+    <td><%= item.sell_price %></td>
+    <td>|</td>
+    <td> ± Profit</td>
+  </tr>
+  <% end %>
+</table>
