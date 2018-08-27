@@ -6,13 +6,13 @@ class Item
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
+    @manufacturer_id = options['manufacturer_id'].to_i
     @name = options['name']
     @type = options['type']
     @description = options['description']
     @quantity_in_stock = options['quantity_in_stock'].to_i
     @purchase_price = options['purchase_price'].to_f
     @sell_price = options['sell_price'].to_f
-    @manufacturer_id = options['manufacturer_id'].to_i
   end
 
   def save()
@@ -59,6 +59,16 @@ class Item
     return products
   end
 
+  def level()
+    if @quantity_in_stock < 10
+      "LOW"
+    elsif @quantity_in_stock >50
+      "HIGH"
+    else
+      "Medium"
+    end
+  end
+
   def delete()
     sql = "DELETE FROM items
     WHERE id = $1"
@@ -71,9 +81,6 @@ class Item
     SqlRunner.run(sql)
   end
 
-  # def self.level()
-  #
-  # end
 
   # def self.assign_manufacturer()
   #

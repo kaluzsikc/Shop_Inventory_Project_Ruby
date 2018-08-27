@@ -1,8 +1,8 @@
-<h1>Details</h1>
+<h1>Details on <%= @items.name %></h1>
 
-
-<ul>
-  <% @items.item.each do |item| %>
-  <li><%= item.name %></li>
-  <% end %>
-</ul>
+<p>Manufacturer:  <%= @items.manufacturer_id %></p>
+<p>Type:  <%= @items.type %></p>
+<p>Description: <%= @items.description %> </p>
+<p>Purchase Price:  <%= @items.purchase_price %></p>
+<p>Sell Price: <%= @items.sell_price %> </p>
+<p>Quantity in Stock: <%= @items.quantity_in_stock %> </p>

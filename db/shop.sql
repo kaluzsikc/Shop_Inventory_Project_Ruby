@@ -6,7 +6,7 @@ CREATE TABLE manufacturers(
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   address VARCHAR(255) NOT NULL,
-  telephone INT4 NOT NULL
+  telephone INT
 );
 
 CREATE TABLE items(

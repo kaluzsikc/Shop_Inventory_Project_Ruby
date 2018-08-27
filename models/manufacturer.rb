@@ -8,7 +8,7 @@ class Manufacturer
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @address = options['address']
-    @telephone = options['telephone']
+    @telephone = options['telephone'].to_i
   end
 
   def save()
