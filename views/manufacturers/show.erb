@@ -1,0 +1,15 @@
+<h1>Details on <%= @manufacturer.name %></h1>
+
+<p>Manufacturer ID:   <%= @manufacturer.id %></p>
+<p>Name:              <%= @manufacturer.name %></p>
+<p>Address:           <%= @manufacturer.address %> </p>
+<p>Telephone:         <%= @manufacturer.telephone %></p>
+
+
+<form method="get" action="/manufacturer/<%=@manufacturer.id%>/edit">
+  <input type='submit' value="Edit Manufacturer"/>
+</form>
+
+<form method="post" action="/manufacturer/<%=@manufacturer.id%>/delete">
+  <input type='submit' value="Delete Manufacturer"/>
+</form>
