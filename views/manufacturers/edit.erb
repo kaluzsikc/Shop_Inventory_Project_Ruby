@@ -1,14 +1,16 @@
 <h1>Edit Manufacturer Details</h1>
 
+<form method="post" action='/manufacturers/<%= @manufacturer.id %>/edit'>
+
 
 <label for="Name">Manufacturer Name:</label>
   <input id="name" type="text" name="name" value = "<%=@manufacturer.name %>"/>
 
-<label for="Name">Name:</label>
-  <input id="name" type="text" name="name" value = "<%=@manufacturer.address %>"/>
+<label for="Address">Address:</label>
+  <input id="name" type="text" name="Address" value = "<%=@manufacturer.address %>"/>
 
-<label for="type">Type:</label>
-  <input id="type" type="text" name="type" value = "<%=@manufacturer.telephone %>" />
+<label for="Telephone">Telephone:</label>
+  <input id="telephone" type="text" name="telephone" value = "<%=@manufacturer.telephone %>" />
 
 
 

@@ -5,11 +5,12 @@ require_relative( '../models/item.rb' )
 require_relative( '../models/manufacturer.rb' )
 also_reload( '../models/*' )
 
-
+#Index
 get '/items' do
   @item = Item.all()
   erb ( :'items/index')
 end
+
 #New
 get '/items/new' do
   erb ( :'items/new')
@@ -37,7 +38,7 @@ end
 #UPDATE
 post '/items/:id' do
 Item.new(params).update
-redirect to '/items/index'
+redirect to '/items'
 end
 
 #DELETE

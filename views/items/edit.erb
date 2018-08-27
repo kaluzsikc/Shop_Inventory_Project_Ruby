@@ -1,7 +1,4 @@
-<form method="post" action='/items/:id/edit'>
-
-  <label for="Name">Manufacturer:</label>
-    <input id="name" type="text" name="name" value = "<%=@item.manufacturer_id %>"/>
+<form method="post" action="/items/<%= @item.id %>">
 
   <label for="Name">Name:</label>
     <input id="name" type="text" name="name" value = "<%=@item.name %>"/>
@@ -20,6 +17,9 @@
 
   <label for="quantity_in_stock">Quantity in Stock:</label>
     <input id="quantity_in_stock" type="text" name="quantity_in_stock" value = "<%=@item.quantity_in_stock %>" />
+
+  <label for="markup">Markup Percentage:</label>
+    <input id="markup" type="text" name="markup" value = "<%=@item.markup %>" />
 
     <input type='submit' value="Update Item"/>
 </form>

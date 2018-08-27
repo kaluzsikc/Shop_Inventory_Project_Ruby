@@ -29,11 +29,14 @@ end
 #EDIT
 get '/manufacturers/:id/edit' do
   @manufacturer = Manufacturer.find( params[:id] )
-  redirect to '/manufacturers'
+  erb ( :'manufacturers/edit')
 end
 
-
-
+#UPDATE
+post '/manufacturers/:id' do
+Manufacturer.new(params).update
+redirect to '/manufacturers'
+end
 
 #DELETE
 post '/manufacturers/:id/delete' do

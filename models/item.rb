@@ -88,11 +88,10 @@ class Item
     SqlRunner.run(sql)
   end
 
-  # def profit()
-  #
-  # @sell_price / @purchase_price
-  #
-  # end
+  def markup()
+
+((((@sell_price - @purchase_price) - 1)/@purchase_price)*100).round
+  end
 
   # def self.assign_manufacturer()
   #

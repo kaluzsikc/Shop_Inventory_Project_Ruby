@@ -199,7 +199,7 @@ item13 = Item.new ({
           "type" => "Smart TV",
           "description" => "... add description here ...",
           "purchase_price" => 200,
-          "sell_price" => 1200,
+          "sell_price" => 400,
           "quantity_in_stock" => 5 })
 item13.save
 # binding.pry
