@@ -93,12 +93,11 @@ class Item
     markup.round
   end
 
-  # def self.assign_manufacturer()
-  #
-  # end
-
-  # def manufacturers()
-  #
-  # end
+  def manufacturer()
+    sql = "SELECT * FROM manufacturers WHERE id = $1"
+    values = [@manufacturer_id]
+    result = SqlRunner.run( sql, values)
+    return result.map { |manufacturer| Manufacturer.new(manufacturer) }[0]
+  end
 
 end
