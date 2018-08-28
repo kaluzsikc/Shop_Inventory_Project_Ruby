@@ -2,7 +2,12 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry-byebug' )
 require_relative( '../models/manufacturer.rb' )
+require_relative( '../models/item.rb' )
 
+also_reload( '../models/*' )
+
+
+#Index
 get '/manufacturers' do
   @manufacturer = Manufacturer.all()
   erb ( :'manufacturers/index')
@@ -34,13 +39,13 @@ end
 
 #UPDATE
 post '/manufacturers/:id' do
-Manufacturer.new(params).update
-redirect to '/manufacturers'
+  Manufacturer.new(params).update
+  redirect to '/manufacturers'
 end
 
 #DELETE
 post '/manufacturers/:id/delete' do
-    manufacturer = Manufacturer.find( params[:id] )
-    manufacturer.delete()
-    redirect to '/manufacturers'
+  manufacturer = Manufacturer.find( params[:id] )
+  manufacturer.delete()
+  redirect to '/manufacturers'
 end

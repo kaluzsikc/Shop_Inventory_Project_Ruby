@@ -1,10 +1,20 @@
-<form method="post" action="/items/<%= @item.id %>">
+<h1>Edit Item Details</h1>
+
+<form method="post" action='/items/<%= @item.id %>'>
+
+  <input type="hidden" name="_method" value="put">
 
   <label for="Name">Name:</label>
     <input id="name" type="text" name="name" value = "<%=@item.name %>"/>
 
   <label for="type">Type:</label>
     <input id="type" type="text" name="type" value = "<%=@item.type %>" />
+
+  <select name="manufacturer_id">
+    <% @manufacturers.each do |manufacturer| %>
+      <option <%= "selected" if @item.manufacturer_id == manufacturer.id %> value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+    <% end %>
+  </select>
 
   <label for="description">Description:</label>
     <input id="description" type="text" name="description" value = "<%=@item.description %>" />
@@ -18,7 +28,7 @@
   <label for="quantity_in_stock">Quantity in Stock:</label>
     <input id="quantity_in_stock" type="text" name="quantity_in_stock" value = "<%=@item.quantity_in_stock %>" />
 
-  <label for="markup">Markup Percentage:</label>
+  <label for="markup">Markup Percentage(%):</label>
     <input id="markup" type="text" name="markup" value = "<%=@item.markup %>" />
 
     <input type='submit' value="Update Item"/>
