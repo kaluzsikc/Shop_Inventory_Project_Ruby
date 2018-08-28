@@ -89,8 +89,8 @@ class Item
   end
 
   def markup()
-
-((((@sell_price - @purchase_price) - 1)/@purchase_price)*100).round
+    markup = ((@sell_price - @purchase_price)/@purchase_price)*100
+    markup.round
   end
 
   # def self.assign_manufacturer()
