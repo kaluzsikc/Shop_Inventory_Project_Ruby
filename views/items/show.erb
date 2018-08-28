@@ -1,10 +1,12 @@
-<h1>Details on: <%= @item.name %></h1>
+<h1>  <%= @item.name %></h1>
 
-<p>Manufacturer:      <%= @item.manufacturer_id %></p>
+<!-- <p>Manufacturer ID:   <%= @item.manufacturer_id %></p> -->
 <p>Type:              <%= @item.type %></p>
 <p>Description:       <%= @item.description %> </p>
+<p>Manufacturer:   <%= @item.manufacturer.name %></p>
 <p>Purchase Price:    <%= @item.purchase_price %></p>
 <p>Sell Price:        <%= @item.sell_price %> </p>
+<p>Markup:            <%= @item.markup %>%</p>
 <p>Quantity in Stock: <%= @item.quantity_in_stock %> </p>
 
 

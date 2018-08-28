@@ -1,38 +1,39 @@
-<h1>Items on Stock</h1>
+<h1>Items in Stock</h1>
 
-<a href="/items/new">Add New Item</a>
+<a href="/items/new"><button type="button">Add New Item</button></a>
 
 <br><br>
 
 <table>
   <tr>
-    <th>Product ID  </th>
-    <th></th>
-    <th>Manuf. Name</th>
-    <th></th>
     <th>Product Name</th>
     <th></th>
     <th>Product Type</th>
     <th></th>
+    <th>Manufacturer</th>
+    <th></th>
     <th>Stock Level</th>
     <th></th>
     <th>Profit</th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% for item in @item %>
 
   <tr>
-    <td><%= item.id %></td>
-    <td>|</td>
-    <td><%= Manufacturer.find(item.manufacturer_id).name%></td>
-    <td>|</td>
-    <td><a href="/items/<%= item.id %>"><%= item.name %></a></td>
+    <td><%= item.name %></td>
     <td>|</td>
     <td><%= item.type %></td>
+    <td>|</td>
+    <td><%= Manufacturer.find(item.manufacturer_id).name%></td>
     <td>|</td>
     <td><%= item.level %></td>
     <td>|</td>
     <td><%= item.markup %>%</td>
+    <td>|</td>
+    <td><a href="/items/<%= item.id %>">Details</a></td>
   </tr>
+
   <% end %>
 </table>

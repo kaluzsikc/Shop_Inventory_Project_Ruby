@@ -1,13 +1,13 @@
 <h1>Manufacturers</h1>
 
-<a href="/manufacturers/new">Add New Manufacturer</a>
+<a href="/manufacturers/new"><button type = "button">Add New Manufacturer</button></a>
 
 <br><br>
 
 <table>
   <tr>
-    <th>ID</th>
-    <th></th>
+    <!-- <th>ID</th>
+    <th></th> -->
     <th>Name</th>
     <th></th>
     <th>Address</th>
@@ -19,13 +19,16 @@
   <% for manufacturer in @manufacturer %>
 
   <tr>
-    <td><%= manufacturer.id %></td>
-    <td>|</td>
-    <td><a href="/manufacturers/<%= manufacturer.id %>"><%= manufacturer.name %></a></td>
+    <!-- <td><%= manufacturer.id %></td>
+    <td>|</td> -->
+    <td><%= manufacturer.name %></a></td>
     <td>|</td>
     <td><%= manufacturer.address %></td>
     <td>|</td>
     <td><%= manufacturer.telephone %></td>
+    <td>|</td>
+    <td><a href="/manufacturers/<%= manufacturer.id %>">Details</a></td>  </tr>
   </tr>
+  
   <% end %>
 </table>
