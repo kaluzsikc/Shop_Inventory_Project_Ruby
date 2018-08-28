@@ -90,7 +90,7 @@ class Item
 
   def markup()
     markup = ((@sell_price - @purchase_price)/@purchase_price)*100
-    markup.round
+    markup.round(2)
   end
 
   def manufacturer()
