@@ -2,19 +2,21 @@
 
 <form method="post" action='/items/<%= @item.id %>'>
 
-  <input type="hidden" name="_method" value="put">
+  <!-- <input type="hidden" name="_method" value="put"> -->
 
-  <label for="Name">Name:</label>
+  <label for ="manufacturer"> Manufacturer:</label>
+    <select name="manufacturer_id">
+      <% @manufacturers.each do |manufacturer| %>
+        <option <%= "selected" if @item.manufacturer_id == manufacturer.id %>
+          value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+      <% end %>
+    </select>
+
+  <label for="Name">Product Name:</label>
     <input id="name" type="text" name="name" value = "<%=@item.name %>"/>
 
   <label for="type">Type:</label>
     <input id="type" type="text" name="type" value = "<%=@item.type %>" />
-
-  <select name="manufacturer_id">
-    <% @manufacturers.each do |manufacturer| %>
-      <option <%= "selected" if @item.manufacturer_id == manufacturer.id %> value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
-    <% end %>
-  </select>
 
   <label for="description">Description:</label>
     <input id="description" type="text" name="description" value = "<%=@item.description %>" />
