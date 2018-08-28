@@ -2,13 +2,11 @@
 
 <form method="post" action='/items/new'>
 
-  <label for="manufacturer-selection">Manufacturer:</label>
-    <select name="manufacturer_id">
-
-
-
-
-
+  <label> Manufacturer:</label>
+    <select id="item" name="manufacturer_id">
+      <% @manufacturers.each do |manufacturer| %>
+        <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+      <% end %>
     </select>
 
   <label for="Name">Name:</label>
@@ -21,13 +19,13 @@
     <input id="description" type="text" name="description"/>
 
   <label for="purchase_price">Purchase Price:</label>
-    <input id="purchase_price" type="text" name="purchase_price"/>
+    <input id="purchase_price" type="number" name="purchase_price"/>
 
   <label for="sell_price">Sell Price:</label>
-    <input id="sell_price" type="text" name="sell_price"/>
+    <input id="sell_price" type="number" name="sell_price"/>
 
   <label for="quantity_in_stock">Quantity in Stock:</label>
-    <input id="quantity_in_stock" type="text" name="quantity_in_stock" />
+    <input id="quantity_in_stock" type="number" name="quantity_in_stock" />
 
     <input type='submit' value="Create Item"/>
 </form>

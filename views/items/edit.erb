@@ -2,17 +2,16 @@
 
 <form method="post" action='/items/<%= @item.id %>'>
 
-  <!-- <input type="hidden" name="_method" value="put"> -->
+  <input type="hidden" name="_method" value="put">
 
   <label for ="manufacturer"> Manufacturer:</label>
     <select name="manufacturer_id">
       <% @manufacturers.each do |manufacturer| %>
-        <option <%= "selected" if @item.manufacturer_id == manufacturer.id %>
-          value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+        <option <%= "selected" if @item.manufacturer_id == manufacturer.id %> value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
       <% end %>
     </select>
 
-  <label for="Name">Product Name:</label>
+  <label for="Name">Name:</label>
     <input id="name" type="text" name="name" value = "<%=@item.name %>"/>
 
   <label for="type">Type:</label>
@@ -22,16 +21,17 @@
     <input id="description" type="text" name="description" value = "<%=@item.description %>" />
 
   <label for="purchase_price">Purchase Price:</label>
-    <input id="purchase_price" type="text" name="purchase_price" value = "<%=@item.purchase_price %>" />
+    <input id="purchase_price" type="number" name="purchase_price" value = "<%=@item.purchase_price %>" />
 
   <label for="sell_price">Sell Price:</label>
-    <input id="sell_price" type="text" name="sell_price" value = "<%=@item.sell_price %>" />
+    <input id="sell_price" type="number" name="sell_price" value = "<%=@item.sell_price %>" />
 
   <label for="quantity_in_stock">Quantity in Stock:</label>
-    <input id="quantity_in_stock" type="text" name="quantity_in_stock" value = "<%=@item.quantity_in_stock %>" />
+    <input id="quantity_in_stock" type="number" name="quantity_in_stock" value = "<%=@item.quantity_in_stock %>" />
 
   <label for="markup">Markup Percentage(%):</label>
-    <input id="markup" type="text" name="markup" value = "<%=@item.markup %>" />
+    <input id="markup" type="number" name="markup" value = "<%=@item.markup %>" />
 
     <input type='submit' value="Update Item"/>
+
 </form>

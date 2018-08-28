@@ -13,6 +13,7 @@ end
 
 #New
 get '/items/new' do
+  @manufacturers = Manufacturer.all
   erb ( :'items/new')
 end
 
