@@ -6,20 +6,25 @@
 
 <table>
   <tr>
-    <th>ID  </th>
+    <th>Product ID  </th>
     <th></th>
-    <th>Name</th>
+    <th>Manuf. Name</th>
     <th></th>
-    <th>Type</th>
+    <th>Product Name</th>
+    <th></th>
+    <th>Product Type</th>
     <th></th>
     <th>Stock Level</th>
     <th></th>
     <th>Profit</th>
-
   </tr>
+
   <% for item in @item %>
+
   <tr>
     <td><%= item.id %></td>
+    <td>|</td>
+    <td><%= Manufacturer.find(item.manufacturer_id).name%></td>
     <td>|</td>
     <td><a href="/items/<%= item.id %>"><%= item.name %></a></td>
     <td>|</td>
