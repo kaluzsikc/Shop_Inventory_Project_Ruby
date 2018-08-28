@@ -73,8 +73,11 @@ class Manufacturer
     SqlRunner.run( sql)
   end
 
-  # def products()
-  #
-  # end
+  def items()
+    sql = "SELECT * FROM items WHERE manufacturer_id = $1"
+    values = [@id]
+    result = SqlRunner.run( sql, values)
+    return result.map { |item| Item.new(item) }
+  end
 
 end
