@@ -4,18 +4,13 @@
 
 <br><br>
 
-<table>
-  <tr>
+<table class="table">
+  <tr class="table-header">
     <th>Product Name</th>
-    <th></th>
     <th>Product Type</th>
-    <th></th>
     <th>Manufacturer</th>
-    <th></th>
     <th>Stock Level</th>
-    <th></th>
     <th>Profit</th>
-    <th></th>
     <th></th>
   </tr>
 
@@ -23,15 +18,10 @@
 
   <tr>
     <td><%= item.name %></td>
-    <td>|</td>
     <td><%= item.type %></td>
-    <td>|</td>
     <td><%= Manufacturer.find(item.manufacturer_id).name%></td>
-    <td>|</td>
     <td><%= item.level %></td>
-    <td>|</td>
     <td><%= item.markup %>%</td>
-    <td>|</td>
     <td><a href="/items/<%= item.id %>">Details</a></td>
   </tr>
 

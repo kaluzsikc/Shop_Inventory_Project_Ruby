@@ -4,14 +4,11 @@
 
 <br><br>
 
-<table>
-  <tr>
-    <!-- <th>ID</th>
-    <th></th> -->
+<table class="table">
+  <tr class="table-header-manuf">
+    <th>ID</th>
     <th>Name</th>
-    <th></th>
     <th>Address</th>
-    <th></th>
     <th>Telephone</th>
     <th></th>
   </tr>
@@ -19,16 +16,13 @@
   <% for manufacturer in @manufacturer %>
 
   <tr>
-    <!-- <td><%= manufacturer.id %></td>
-    <td>|</td> -->
+    <td><%= manufacturer.id %></td>
     <td><%= manufacturer.name %></a></td>
-    <td>|</td>
     <td><%= manufacturer.address %></td>
-    <td>|</td>
     <td><%= manufacturer.telephone %></td>
-    <td>|</td>
-    <td><a href="/manufacturers/<%= manufacturer.id %>">Details</a></td>  </tr>
+    <td><a href="/manufacturers/<%= manufacturer.id %>">Details</a></td>
+   </tr>
   </tr>
-  
+
   <% end %>
 </table>

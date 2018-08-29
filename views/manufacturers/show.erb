@@ -1,15 +1,16 @@
-<h1>Details on: <%= @manufacturer.name %></h1>
+<h1 class="bg-info">Details for: <%= @manufacturer.name %></h1>
 
 <p>Manufacturer ID:   <%= @manufacturer.id %></p>
 <p>Name:              <%= @manufacturer.name %></p>
 <p>Address:           <%= @manufacturer.address %> </p>
 <p>Telephone:         <%= @manufacturer.telephone %></p>
 
+<div class="btn-group">
+  <form method="get" action="/manufacturers/<%=@manufacturer.id%>/edit">
+    <input type='submit' value="Edit Manufacturer"id="edit_button"/>
+  </form>
 
-<form method="get" action="/manufacturers/<%=@manufacturer.id%>/edit">
-  <input type='submit' value="Edit Manufacturer"/>
-</form>
-
-<form method="post" action="/manufacturers/<%=@manufacturer.id%>/delete">
-  <input type='submit' value="Delete Manufacturer"/>
-</form>
+  <form method="post" action="/manufacturers/<%=@manufacturer.id%>/delete">
+    <input type='submit' value="Delete Manufacturer" id="delete_button"/>
+  </form>
+</div>
