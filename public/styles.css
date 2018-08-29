@@ -1,5 +1,5 @@
 body {
-}
+padding: 20px;}
 
 #edit_button{
   color: blue;
@@ -9,6 +9,7 @@ body {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
+
 #edit_button:hover{
   background-color: blue;
   color: white;
@@ -30,8 +31,18 @@ body {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+.item-level-low{
+  background-color: red;}
+
+.item-level-high{
+  background-color: green;}
+
+.item-level-medium{
+  background-color: orange;}
+
+
 .bg-info{
-  background-color: yellow;
+  background-color: green;
 }
 
 .table{
@@ -47,7 +58,7 @@ body {
 }
 
 .table-header-manuf{
-  background-color: darkgrey;
+  background-color: lightgrey;
   color: white;
 }
 

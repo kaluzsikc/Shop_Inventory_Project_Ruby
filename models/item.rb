@@ -70,6 +70,16 @@ class Item
     end
   end
 
+  def level_by_color()
+    if level() == 'Low'
+      "item-level-low"
+    elsif level() == 'High'
+       "item-level-high"
+    else
+      "item-level-medium"
+    end
+  end
+
   def delete()
     sql = "DELETE FROM items
     WHERE id = $1"
