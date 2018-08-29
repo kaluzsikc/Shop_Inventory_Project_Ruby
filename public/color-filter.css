@@ -1,0 +1,24 @@
+/* Stock level */
+.item-level-low{
+  background-color: red;}
+
+.item-level-high{
+  background-color: green;}
+
+.item-level-medium{
+  background-color: orange;}
+
+/* Markup level*/
+.profit-low{
+  background-color:  red;}
+
+.profit-high{
+  background-color:  green;}
+
+.profit-medium{
+  background-color:  orange;}
+
+
+.bg-info{
+  background-color: green;
+}
