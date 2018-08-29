@@ -103,6 +103,16 @@ class Item
     markup.round(2)
   end
 
+  def markup_level()
+    if markup() <= 33
+      "profit-low"
+    elsif markup() >= 66
+      "profit-high"
+    else
+      "profit-medium"
+    end
+  end
+
   def manufacturer()
     sql = "SELECT * FROM manufacturers WHERE id = $1"
     values = [@manufacturer_id]

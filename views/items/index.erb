@@ -21,7 +21,7 @@
     <td><%= item.type %></td>
     <td><%= Manufacturer.find(item.manufacturer_id).name%></td>
     <td class="<%= item.level_by_color %>"><%= item.level %></td>
-    <td><%= item.markup %>%</td>
+    <td class="<%= item.markup_level %>"><%= item.markup %>%</td>
     <td><a href="/items/<%= item.id %>">Details</a></td>
   </tr>
 
