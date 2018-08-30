@@ -4,34 +4,25 @@
   width: 100%;
 }
 
-.table-header{
-  background-color: #4CAF50;
-  color: white;
-}
-
-.table-header-manuf{
-  background-color: #003399;
+.table-header {
+  background-color: #3973ac;
   color: white;
 }
 
 .table td, th {
   border: 1px solid #ddd;
   padding: 8px;
+  text-align: center;
 }
 
 .table tr:nth-child(even){background-color: #f2f2f2;}
 
 .table tr:hover {background-color: #ddd;}
 
-.item-details{
-  padding-top: 5%;
-  margin:auto;
-  width: 50%;
-  
-}
+.table tr:first-child:hover {background-color: #3973ac;}
 
-.manufacturer-details{
-  padding-top: 5%;
+.item-details, .manufacturer-details{
+  padding: 2px;
   margin:auto;
   width: 50%;
 }

@@ -5,7 +5,7 @@
   <table class="manufacturer-details">
     <tr>
       <td><strong>Manufacturer Name:</strong></td>
-      <th class="table-header-manuf"><%= @manufacturer.name %></th>
+      <th class="table-header"><%= @manufacturer.name %></th>
     </tr>
     <tr>
       <td>Manufacturer ID: </td>
@@ -24,6 +24,8 @@
       <td><%= @manufacturer.telephone %></td>
     </tr>
     <tr>
+    </tr>
+    <tr>
       <td><form method="get" action="/manufacturers/<%=@manufacturer.id%>/edit">
         <input type='submit' value="Edit Manufacturer"id="edit_button"/>
       </form></td>
@@ -33,21 +35,3 @@
     </tr>
   </table>
 </div>
-
-
-
-<!-- <h1 class="bg-info">Details for: <%= @manufacturer.name %></h1>
-
-<p>Manufacturer ID:   <%= @manufacturer.id %></p>
-<p>Name:              <%= @manufacturer.name %></p>
-<p>Address:           <%= @manufacturer.address %> </p>
-<p>Telephone:         <%= @manufacturer.telephone %></p>
-
-
-<form method="get" action="/manufacturers/<%=@manufacturer.id%>/edit">
-  <input type='submit' value="Edit Manufacturer"id="edit_button"/>
-</form>
-
-<form method="post" action="/manufacturers/<%=@manufacturer.id%>/delete">
-  <input type='submit' value="Delete Manufacturer" id="delete_button"/>
-</form> -->
