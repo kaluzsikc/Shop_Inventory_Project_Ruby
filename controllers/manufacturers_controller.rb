@@ -28,7 +28,8 @@ end
 post '/manufacturers/new' do
   @manufacturer = Manufacturer.new( params )
   @manufacturer.save()
-  redirect to '/manufacturers'
+  erb (:'manufacturers/create')
+  # redirect to '/manufacturers'
 end
 
 #EDIT
