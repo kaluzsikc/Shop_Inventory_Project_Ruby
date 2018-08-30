@@ -37,7 +37,6 @@ h1{
 .container-new-manufacturer{
   padding: 10px;
   width:50%;
-  span: 2;
   margin:auto;
   text-align: right;
   /* display: flex; */
@@ -55,12 +54,15 @@ h1{
 
 .confirmation-box{
   margin: auto;
+  height: 10em;
   width:50%;
-  /* font-weight: bold; */
-  font-size: 20px;
-  height: 200px;
-  text-align: center;
   background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
 
-
+.confirmation-box p{
+  font-size: 20px;
+  margin: 0
 }
