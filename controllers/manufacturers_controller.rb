@@ -48,5 +48,6 @@ end
 post '/manufacturers/:id/delete' do
   manufacturer = Manufacturer.find( params[:id] )
   manufacturer.delete()
-  redirect to '/manufacturers'
+  erb ( :'manufacturers/delete')
+  # redirect to '/manufacturers'
 end
