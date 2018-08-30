@@ -15,12 +15,10 @@ padding: 30px;
   font-size: 20px;
   text-align: center;
   grid-area: head;
-  /* background-color: green; */
 }
 
 .wrapper > main {
   grid-area: main;
-  /* background-color: yellow; */
   flex: 1 0 auto;
 }
 
@@ -36,23 +34,21 @@ h1{
   font-size: 2rem;
 }
 
-.bg-info{
-  background-color: #4CAF50;
-}
-
 .container-new-manufacturer{
-  width: 100%;
   padding: 10px;
-  display: flex;
-  /* align-items: center; */
-  justify-content: center;
+  width:50%;
+  span: 2;
+  margin:auto;
+  text-align: right;
+  /* display: flex; */
   background-color: #f2f2f2;
 }
 
 .container-new-item{
   padding: 10px;
-  width: 100%;
-  display: flex;
+  width:50%;
+  margin:auto;
+  text-align: right;
   justify-content: center;
   background-color: #f2f2f2;
 }

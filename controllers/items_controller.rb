@@ -27,7 +27,8 @@ end
 post '/items/new' do
   @item = Item.new( params )
   @item.save()
-  redirect to '/items'
+  erb (:'items/create')
+  # redirect to '/items'
 end
 
 #EDIT

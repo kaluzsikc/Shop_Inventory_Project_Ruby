@@ -27,11 +27,16 @@
   padding-top: 5%;
   margin:auto;
   width: 50%;
-
+  
 }
 
 .manufacturer-details{
   padding-top: 5%;
   margin:auto;
   width: 50%;
+}
+
+.container-edit{
+  width:50%;
+  margin: auto;
 }

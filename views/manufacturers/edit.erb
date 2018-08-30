@@ -1,16 +1,16 @@
 <h1>Edit Manufacturer Details</h1>
 <hr>
-<form method="post" action='/manufacturers/<%= @manufacturer.id %>'>
+<div class="container-edit">
+  <form method="post" action='/manufacturers/<%= @manufacturer.id %>'>
+    <label for="Name">Manufacturer Name:</label>
+      <input id="name" type="text" name="name" value = "<%=@manufacturer.name %>"/>
 
+    <label for="Address">Address:</label>
+      <input id="name" type="text" name="address" value = "<%=@manufacturer.address %>"/>
 
-  <label for="Name">Manufacturer Name:</label>
-    <input id="name" type="text" name="name" value = "<%=@manufacturer.name %>"/>
+    <label for="Telephone">Telephone:</label>
+      <input id="telephone" type="text" name="telephone" value = "<%=@manufacturer.telephone %>" />
 
-  <label for="Address">Address:</label>
-    <input id="name" type="text" name="address" value = "<%=@manufacturer.address %>"/>
-
-  <label for="Telephone">Telephone:</label>
-    <input id="telephone" type="text" name="telephone" value = "<%=@manufacturer.telephone %>" />
-
-  <input type='submit' value="Update Manufacturer"/>
-</form>
+    <input type='submit' value="Update Manufacturer" id="update_button"/>
+  </form>
+</div>
