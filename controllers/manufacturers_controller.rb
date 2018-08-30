@@ -46,8 +46,8 @@ end
 
 #DELETE
 post '/manufacturers/:id/delete' do
-  manufacturer = Manufacturer.find( params[:id] )
-  manufacturer.delete()
+  @manufacturer = Manufacturer.find( params[:id] )
+  @manufacturer.delete()
   erb ( :'manufacturers/delete')
   # redirect to '/manufacturers'
 end

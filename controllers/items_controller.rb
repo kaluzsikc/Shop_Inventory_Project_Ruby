@@ -46,8 +46,8 @@ end
 
 #DELETE
 post '/items/:id/delete' do
-  item = Item.find( params[:id] )
-  item.delete()
+  @item = Item.find( params[:id] )
+  @item.delete()
   erb ( :'items/delete')
   # redirect to '/items'
 end
