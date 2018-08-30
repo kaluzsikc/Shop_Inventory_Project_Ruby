@@ -99,8 +99,12 @@ class Item
   end
 
   def markup()
+    if @purchase_price == 0
+      return 0
+    else
     markup = ((@sell_price - @purchase_price)/@purchase_price)*100
     markup.round(2)
+    end
   end
 
   def markup_level()

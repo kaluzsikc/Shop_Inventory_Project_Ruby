@@ -1,31 +1,70 @@
+<hr>
 <h1>New Item</h1>
-
-<form method="post" action='/items/new'>
-
-  <label> Manufacturer:</label>
-    <select id="item" name="manufacturer_id">
-      <% @manufacturers.each do |manufacturer| %>
-        <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
-      <% end %>
-    </select>
-
-  <label for="Name">Name:</label>
-    <input id="name" type="text" name="name"/>
-
-  <label for="type">Type:</label>
-    <input id="type" type="text" name="type"/>
-
-  <label for="description">Description:</label>
-    <input id="description" type="text" name="description"/>
-
-  <label for="purchase_price">Purchase Price:</label>
-    <input id="purchase_price" type="number" name="purchase_price"/>
-
-  <label for="sell_price">Sell Price:</label>
-    <input id="sell_price" type="number" name="sell_price"/>
-
-  <label for="quantity_in_stock">Quantity in Stock:</label>
-    <input id="quantity_in_stock" type="number" name="quantity_in_stock" />
-
-    <input type='submit' value="Create Item"/>
-</form>
+<hr>
+<div class="container-new-item">
+  <form method="post" action='/items/new'>
+    <div class="row">
+      <div class="col-25">
+        <label> Manufacturer:</label>
+      </div>
+      <div class="col-75">
+        <select id="item" name="manufacturer_id">
+          <% @manufacturers.each do |manufacturer| %>
+            <option value="<%= manufacturer.id %>"><%= manufacturer.name %></option>
+          <% end %>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="Name">Product Name:</label>
+      </div>
+      <div class="col-75">
+        <input id="name" type="text" name="name"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="type">Product Type:</label>
+      </div>
+      <div class="col-75">
+        <input id="type" type="text" name="type"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="description" >Description:</label>
+      </div>
+      <div class="col-75">
+        <input id="description" type="text" name="description"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="purchase_price">Purchase Price:</label>
+      </div>
+      <div class="col-75">
+        <input id="purchase_price" type="number" name="purchase_price"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="sell_price">Sell Price:</label>
+      </div>
+      <div class="col-75">
+        <input id="sell_price" type="number" name="sell_price"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="quantity_in_stock">Quantity in Stock:</label>
+      </div>
+      <div class="col-75">
+        <input id="quantity_in_stock" type="number" name="quantity_in_stock" />
+      </div>
+    </div>
+    <div class="row">
+      <input type='submit' value="Create Item" id="create_button"/>
+    </div>
+  </form>
+</div>

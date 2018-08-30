@@ -1,9 +1,7 @@
 
 .table{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
   width: 100%;
-  border: solid 1px black;
 }
 
 .table-header{
@@ -12,15 +10,28 @@
 }
 
 .table-header-manuf{
-  background-color: lightgrey;
+  background-color: #003399;
   color: white;
 }
 
 .table td, th {
-    border: 1px solid #ddd;
-    padding: 8px;
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
 .table tr:nth-child(even){background-color: #f2f2f2;}
 
 .table tr:hover {background-color: #ddd;}
+
+.item-details{
+  padding-top: 5%;
+  margin:auto;
+  width: 50%;
+
+}
+
+.manufacturer-details{
+  padding-top: 5%;
+  margin:auto;
+  width: 50%;
+}

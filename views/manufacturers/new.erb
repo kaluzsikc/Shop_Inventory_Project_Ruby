@@ -1,15 +1,34 @@
+<hr>
 <h1>New Manufacturer</h1>
-
-<form method="post" action='/manufacturers/new'>
-
-  <label for="Name">Manufacturer Name:</label>
-    <input id="name" type="text" name="name"/>
-
-  <label for="Address">Address:</label>
-    <input id="address" type="text" name="address"/>
-
-  <label for="telephone">Telephone:</label>
-    <input id="telephone" type="text" name="telephone"/>
-
-    <input type='submit' value="Create Manufacturer"/>
-</form>
+<hr>
+<div class="container-new-manufacturer">
+  <form method="post" action='/manufacturers/new'>
+    <div class="row">
+        <div class="col-25">
+          <label for="Name">Manufacturer Name:</label>
+        </div>
+        <div class="col-75">
+          <input id="name" type="text" name="name"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="Address">Address:</label>
+        </div>
+        <div class="col-75">
+          <input id="address" type="text" name="address"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="telephone">Telephone:</label>
+        </div>
+        <div class="col-75">
+          <input id="telephone" type="text" name="telephone"/>
+        </div>
+    </div>
+    <div class="row">
+      <input type='submit' value="Create Manufacturer" id="create_button"/>
+    </div>
+  </form>
+</div>
