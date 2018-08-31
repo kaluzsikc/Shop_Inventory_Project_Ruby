@@ -34,6 +34,11 @@ h1{
   font-size: 2rem;
 }
 
+.container-edit{
+  width:50%;
+  margin: auto;
+}
+
 .container-new-manufacturer{
   padding: 10px;
   width:50%;

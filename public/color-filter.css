@@ -1,19 +1,10 @@
-/* Stock level */
-.item-level-low{
-  background-color: #ff4d4d;}
 
-.item-level-high{
-  background-color: #70db70;}
+/* Stock % Markup level */
+.item-level-low, .profit-low{
+  color: #ff4d4d;}
 
-.item-level-medium{
-  background-color: #ffb84d;}
+.item-level-high, .profit-high{
+  color: #70db70;}
 
-/* Markup level*/
-.profit-low{
-  background-color:  #ff4d4d;}
-
-.profit-high{
-  background-color:  #70db70;}
-
-.profit-medium{
-  background-color:  #ffb84d;}
+.item-level-medium, .profit-medium{
+  color: #ffb84d;}
