@@ -62,4 +62,4 @@ _So that I can see all stock items I hold for each manufacturer_<br />
 
 **Acceptance Criteria:** Create a filter dependant on the stock item's manufacturer
 
-![Shop Inventory](src="https://user-images.githubusercontent.com/38946410/46292481-ed2a5a00-c588-11e8-8c4e-0432139859c6.png")
+![Shop Inventory](https://user-images.githubusercontent.com/38946410/46292481-ed2a5a00-c588-11e8-8c4e-0432139859c6.png)
